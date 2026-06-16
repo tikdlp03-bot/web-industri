@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Klien | PT. Solusi Industri Manufaktur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        
+        <div class="auth-header">
+            <h2>PT. SOLUSI INDUSTRI</h2>
+            <p>Portal Mitra & Procurement B2B</p>
+        </div>
+
+        <div id="login-box">
+            <h3>Masuk ke Akun Anda</h3>
+            <form id="form-login">
+                <div class="form-group">
+                    <label for="login-email">Email Bisnis:</label>
+                    <input type="email" id="login-email" required placeholder="nama@perusahaan.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Kata Sandi:</label>
+                    <input type="password" id="login-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-auth">Masuk Portal</button>
+            </form>
+            <p class="auth-switch">Belum jadi mitra? <a href="#" onclick="switchForm('register')">Daftar Akun Baru</a></p>
+        </div>
+
+        <div id="register-box" style="display: none;">
+            <h3>Pendaftaran Mitra Baru</h3>
+            <form id="form-register">
+                <div class="form-group">
+                    <label for="reg-perusahaan">Nama Perusahaan:</label>
+                    <input type="text" id="reg-perusahaan" required placeholder="PT. Maju Bersama">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email Bisnis:</label>
+                    <input type="email" id="reg-email" required placeholder="procurement@perusahaan.com">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Kata Sandi Baru:</label>
+                    <input type="password" id="reg-password" required placeholder="Minimal 6 karakter">
+                </div>
+                <button type="submit" class="btn-auth">Ajukan Kemitraan</button>
+            </form>
+            <p class="auth-switch">Sudah punya akun? <a href="#" onclick="switchForm('login')">Silakan Masuk</a></p>
+        </div>
+
+        <div class="auth-footer">
+            <a href="index.html">&larr; Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+
+    <script>
+        function switchForm(type) {
+            const loginBox = document.getElementById('login-box');
+            const registerBox = document.getElementById('register-box');
+            
+            if (type === 'register') {
+                loginBox.style.display = 'none';
+                registerBox.style.display = 'block';
+            } else {
+                loginBox.style.display = 'block';
+                registerBox.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

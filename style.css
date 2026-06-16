@@ -165,6 +165,116 @@ footer {
         padding: 15px;
     }
 }
+/* ==========================================================================
+   9. HALAMAN LOGIN & REGISTER (AUTH LAYOUT)
+   ========================================================================== */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef2f7; /* Background agak abu-abu kebiruan */
+    padding: 20px;
+}
+
+.auth-container {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h2 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 22px;
+}
+
+.auth-header p {
+    color: #666666;
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.auth-container h3 {
+    color: var(--text-dark);
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eef2f7;
+    padding-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.btn-auth {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-auth:hover {
+    background-color: #1a4480;
+}
+
+.auth-switch {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #666666;
+}
+
+.auth-switch a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+}
+
+.auth-footer a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-footer a:hover {
+    color: var(--text-dark);
+}
+
 
 body {
     color: var(--text-dark);
