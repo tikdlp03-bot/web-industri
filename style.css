@@ -1,0 +1,117 @@
+/* 1. PENGATURAN UMUM (FONT & WARNA DASAR) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333; /* Warna teks abu-abu gelap agar nyaman dibaca */
+    background-color: #f9f9f9; /* Warna latar belakang web */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. HEADER & NAVIGASI (Gaya Korporat) */
+header {
+    background-color: #0f2c59; /* Biru Navy khas industri: melambangkan kepercayaan */
+    color: #ffffff;
+    padding: 20px;
+}
+
+header h2 {
+    margin: 0 0 10px 0;
+}
+
+nav ul {
+    list-style: none; /* Menghilangkan tanda bullet */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Membuat menu berjejer ke samping */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #dac0a3; /* Warna berubah saat kursor diarahkan ke menu */
+}
+
+/* 3. LAYOUT HALAMAN (SECTIONS) */
+section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 5px; /* Membuat sudut kotak sedikit melengkung */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Memberi efek bayangan halus */
+}
+
+/* 4. TOMBOL UTAMA */
+button {
+    background-color: #ff6b6b; /* Warna tombol yang kontras agar menarik perhatian */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #e64c4c;
+}
+
+/* 5. MERAPIKAN TABEL SPESIFIKASI INDUSTRI */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan celah antar garis tabel */
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th {
+    background-color: #0f2c59;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Efek warna selang-seling pada baris tabel */
+}
+
+/* 6. MERAPIKAN FORMULIR PERMINTAAN HARGA (RFQ) */
+form div {
+    margin-bottom: 15px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Memastikan padding tidak merusak ukuran kotak */
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: #1c2731;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
