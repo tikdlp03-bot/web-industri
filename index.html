@@ -139,7 +139,26 @@
                 </div>
                 <br>
                 <div>
+                    <label for="material">Pilih Material (Jika Kustom):</label><br>
+                    <select id="material" name="material">
+                        <option value="">-- Pilih Material --</option>
+                        <option value="s45c">Baja Karbon (S45C)</option>
+                        <option value="stainless_steel_314">Stainless Steel 314</option>
+                        <option value="aluminium_6061">Aluminium (Al6061)</option>
+                        <option value="custom">Material Kustom Lainnya</option>
+                    </select>
+                <div>
                     <label for="jumlah">Jumlah Kebutuhan (Pcs):</label><br>
+                    <input type="number" id="jumlah" name="jumlah" min="1" required placeholder="Contoh: 100">
+                </div>
+
+                <div id="info-estimasi" style="margin-top: 10px; color: #0f2c59; background: #eef2f7; padding: 10px; border-left: 4px solid #0f2c59; border-radius: 4px; display: inline-block; width: 100%; box-sizing: border-box;"></div>
+
+                <br>
+                <div>
+                    <label for="pesan">Detail Spesifikasi Tambahan:</label><br>
+                    <textarea id="pesan" name="pesan" rows="5" cols="40" placeholder="Tuliskan detail dimensi..."></textarea>
+                </div>
                     <input type="number" id="jumlah" name="jumlah" min="1" required placeholder="Contoh: 100">
                 </div>
                 <br>
@@ -164,6 +183,6 @@
         <p>Hubungi Kami: info@solusiindustri.com | +62 21 5555 1234</p>
         <p>&copy; 2026 PT. Solusi Industri Manufaktur. Hak Cipta Dilindungi Undang-Undang.</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
