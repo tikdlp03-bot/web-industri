@@ -1,3 +1,12 @@
+/* Definisikan warna utama perusahaan di sini */
+:root {
+    --primary-color: #0f2c59;  /* Biru Navy */
+    --secondary-color: #dac0a3; /* Krem Gold */
+    --accent-color: #ff6b6b;    /* Merah Tombol */
+    --text-dark: #333333;       /* Abu-abu Gelap */
+    --bg-light: #f9f9f9;        /* Background */
+}
+
 /* 1. PENGATURAN UMUM (FONT & WARNA DASAR) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -110,4 +119,13 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
+}
+
+body {
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+header {
+    background-color: var(--primary-color);
 }
