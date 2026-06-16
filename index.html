@@ -3,28 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. Maju Industri Terdepan</title>
+    <title>PT. Solusi Industri Manufaktur | Komponen Alat Berat</title>
 </head>
 <body>
 
+    <!-- NAVIGASI UTAMA -->
     <header>
-        <h1>Logo Perusahaan</h1>
+        <div class="logo">
+            <h2>PT. SOLUSI INDUSTRI MANUFAKTUR</h2>
+        </div>
         <nav>
-            <a href="#profil">Profil</a> | 
-            <a href="#produk">Produk & Layanan</a> | 
-            <a href="#kontak">Hubungi Kami</a>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang-kami">Tentang Kami</a></li>
+                <li><a href="#produk">Produk & Spesifikasi</a></li>
+                <li><a href="#sertifikasi">Sertifikasi</a></li>
+                <li><a href="#penawaran">Minta Penawaran (RFQ)</a></li>
+            </ul>
         </nav>
     </header>
 
+    <hr>
+
+    <!-- MAIN CONTENT -->
     <main>
-        <section id="profil">
-            <h2>Tentang Kami</h2>
-            <p>Kami adalah penyedia solusi manufaktur komponen alat berat sejak tahun 2015.</p>
+
+        <!-- 1. HERO SECTION (BANNER UTAMA) -->
+        <section id="beranda">
+            <h1>Penyedia Komponen Mekanikal Presisi Tinggi untuk Industri Global</h1>
+            <p>Kami memproduksi komponen mesin berkualitas tinggi dengan standar toleransi ketat untuk sektor pertambangan, logistik, dan manufaktur.</p>
+            <button onclick="location.href='#penawaran'">Minta Penawaran Harga</button>
         </section>
+
+        <hr>
+
+        <!-- 2. PROFIL PERUSAHAAN (TENTANG KAMI) -->
+        <section id="tentang-kami">
+            <h2>Mengapa Memilih Kami?</h2>
+            <p>Berdiri sejak tahun 2010, kami didukung oleh mesin CNC mutakhir dan tenaga ahli bersertifikat untuk memastikan setiap produk memenuhi ekspektasi Anda.</p>
+            
+            <h3>Keunggulan Layanan Kami:</h3>
+            <ul>
+                <li><strong>Akurasi Tinggi:</strong> Toleransi hingga &plusmn;0.01 mm.</li>
+                <li><strong>Kapasitas Besar:</strong> Mampu memproduksi hingga 50.000 unit per bulan.</li>
+                <li><strong>Pengiriman Tepat Waktu:</strong> Didukung oleh manajemen logistik yang terintegrasi.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 3. KATALOG PRODUK & TABEL SPESIFIKASI -->
+        <section id="produk">
+            <h2>Katalog Produk Utama</h2>
+            <p>Berikut adalah spesifikasi standar produk yang paling sering dipesan oleh mitra industri kami:</p>
+
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th>Kode Produk</th>
+                        <th>Nama Komponen</th>
+                        <th>Material</th>
+                        <th>Kapasitas Beban Max</th>
+                        <th>Standar Mutu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>H-GEAR-01</strong></td>
+                        <td>Heavy Duty Spur Gear</td>
+                        <td>Baja Karbon (S45C)</td>
+                        <td>15 Ton</td>
+                        <td>JIS G4051</td>
+                    </tr>
+                    <tr>
+                        <td><strong>H-SHAFT-02</strong></td>
+                        <td>Hydraulic Piston Shaft</td>
+                        <td>Stainless Steel 314</td>
+                        <td>25 Ton</td>
+                        <td>ASTM A276</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M-BRACK-03</strong></td>
+                        <td>Custom Mounting Bracket</td>
+                        <td>Aluminium (Al6061)</td>
+                        <td>5 Ton</td>
+                        <td>DIN 1725</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 4. SERTIFIKASI & LEGALITAS -->
+        <section id="sertifikasi">
+            <h2>Komitmen Mutu & Keselamatan</h2>
+            <p>Seluruh proses manufaktur kami berjalan di bawah pengawasan ketat dan telah tersertifikasi secara internasional:</p>
+            <ul>
+                <li><strong>ISO 9001:2015</strong> - Sistem Manajemen Mutu</li>
+                <li><strong>ISO 45001:2018</strong> - Sistem Manajemen Keselamatan dan Kesehatan Kerja (K3)</li>
+                <li><strong>Sertifikat SNI</strong> (Standar Nasional Indonesia)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 5. FORMULIR PERMINTAAN PENAWARAN (RFQ FORM) -->
+        <section id="penawaran">
+            <h2>Hubungi Kami / Minta Penawaran</h2>
+            <p>Silakan isi formulir di bawah ini untuk mendapatkan estimasi harga resmi dari tim *Procurement* kami dalam waktu 1x24 jam.</p>
+
+            <form action="#" method="POST">
+                <div>
+                    <label for="nama_perusahaan">Nama Perusahaan:</label><br>
+                    <input type="text" id="nama_perusahaan" name="nama_perusahaan" required placeholder="PT. Contoh Industri">
+                </div>
+                <br>
+                <div>
+                    <label for="email_proyek">Email Bisnis:</label><br>
+                    <input type="email" id="email_proyek" name="email_proyek" required placeholder="procurement@perusahaan.com">
+                </div>
+                <br>
+                <div>
+                    <label for="jenis_produk">Pilih Produk yang Dibutuhkan:</label><br>
+                    <select id="jenis_produk" name="jenis_produk">
+                        <option value="gear">Heavy Duty Spur Gear (H-GEAR-01)</option>
+                        <option value="shaft">Hydraulic Piston Shaft (H-SHAFT-02)</option>
+                        <option value="bracket">Custom Mounting Bracket (M-BRACK-03)</option>
+                        <option value="custom">Kustomisasi Komponen Lainnya</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="jumlah">Jumlah Kebutuhan (Pcs):</label><br>
+                    <input type="number" id="jumlah" name="jumlah" min="1" required placeholder="Contoh: 100">
+                </div>
+                <br>
+                <div>
+                    <label for="pesan">Detail Spesifikasi Tambahan:</label><br>
+                    <textarea id="pesan" name="pesan" rows="5" cols="40" placeholder="Tuliskan detail dimensi, material khusus, atau tanggal tenggat waktu proyek di sini..."></textarea>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Kirim Formulir RFQ</button>
+                </div>
+            </form>
+        </section>
+
     </main>
 
+    <hr>
+
+    <!-- FOOTER PERUSAHAAN -->
     <footer>
-        <p>&copy; 2026 PT. Maju Industri Terdepan. All rights reserved.</p>
+        <p><strong>Kantor Pusat & Pabrik:</strong> Jl. Industri Raya No. 45, Kawasan Industri Jababeka, Bekasi, Indonesia.</p>
+        <p>Hubungi Kami: info@solusiindustri.com | +62 21 5555 1234</p>
+        <p>&copy; 2026 PT. Solusi Industri Manufaktur. Hak Cipta Dilindungi Undang-Undang.</p>
     </footer>
 
 </body>
