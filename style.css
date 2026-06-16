@@ -10,34 +10,37 @@ body {
 
 /* 2. HEADER & NAVIGASI (Gaya Korporat) */
 header {
-    background-color: #0f2c59; /* Biru Navy khas industri: melambangkan kepercayaan */
+    background-color: #0f2c59; /* Biru Navy Korporat */
     color: #ffffff;
-    padding: 20px;
+    padding: 15px 40px;
+    display: flex; /* Mengaktifkan Flexbox */
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: center; /* Menyejajarkan teks secara vertikal */
 }
 
 header h2 {
-    margin: 0 0 10px 0;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 nav ul {
-    list-style: none; /* Menghilangkan tanda bullet */
+    list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav ul li {
-    display: inline; /* Membuat menu berjejer ke samping */
-    margin-right: 20px;
+    display: flex; /* Membuat menu berjejer rapi ke samping */
+    gap: 25px; /* Memberikan jarak antar menu tanpa margin manual */
 }
 
 nav ul li a {
     color: #ffffff;
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    font-weight: bold;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Efek transisi halus saat hover */
 }
 
 nav ul li a:hover {
-    color: #dac0a3; /* Warna berubah saat kursor diarahkan ke menu */
+    color: #dac0a3;
 }
 
 /* 3. LAYOUT HALAMAN (SECTIONS) */
@@ -91,20 +94,13 @@ tr:nth-child(even) {
 }
 
 /* 6. MERAPIKAN FORMULIR PERMINTAAN HARGA (RFQ) */
-form div {
-    margin-bottom: 15px;
+.form-group-row {
+    display: flex;
+    gap: 20px;
 }
 
-input[type="text"], 
-input[type="email"], 
-input[type="number"], 
-select, 
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Memastikan padding tidak merusak ukuran kotak */
+.form-group-row div {
+    flex: 1; /* Membagi lebar sama rata antara Nama dan Email */
 }
 
 /* 7. FOOTER */

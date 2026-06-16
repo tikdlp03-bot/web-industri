@@ -115,15 +115,18 @@
             <p>Silakan isi formulir di bawah ini untuk mendapatkan estimasi harga resmi dari tim *Procurement* kami dalam waktu 1x24 jam.</p>
 
             <form action="#" method="POST">
-                <div>
-                    <label for="nama_perusahaan">Nama Perusahaan:</label><br>
-                    <input type="text" id="nama_perusahaan" name="nama_perusahaan" required placeholder="PT. Contoh Industri">
+    
+                <div class="form-group-row">
+                    <div>
+                        <label for="nama_perusahaan">Nama Perusahaan:</label><br>
+                        <input type="text" id="nama_perusahaan" name="nama_perusahaan" required placeholder="PT. Contoh Industri">
+                    </div>
+                    <div>
+                        <label for="email_proyek">Email Bisnis:</label><br>
+                        <input type="email" id="email_proyek" name="email_proyek" required placeholder="procurement@perusahaan.com">
+                    </div>
                 </div>
-                <br>
-                <div>
-                    <label for="email_proyek">Email Bisnis:</label><br>
-                    <input type="email" id="email_proyek" name="email_proyek" required placeholder="procurement@perusahaan.com">
-                </div>
+    
                 <br>
                 <div>
                     <label for="jenis_produk">Pilih Produk yang Dibutuhkan:</label><br>
