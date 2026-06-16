@@ -121,6 +121,51 @@ footer {
     font-size: 14px;
 }
 
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (UNTUK LAYAR PONSEL / MAKSIMAL 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Mengubah menu navigasi atas menjadi vertikal (menumpuk) */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block; /* Menu berjejer ke bawah */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+    }
+
+    /* Mengubah form 2 kolom (Nama & Email) menjadi 1 kolom saja di HP */
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Membuat tabel spesifikasi bisa digeser (scroll) ke samping agar tidak terpotong */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Menyesuaikan ukuran tombol agar lebih mudah ditekan jari */
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
 body {
     color: var(--text-dark);
     background-color: var(--bg-light);
