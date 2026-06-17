@@ -56,8 +56,27 @@
         </div>
     </div>
 
-    <script>
-        function switchForm(type) {
+    <script type="module">
+        // 1. Import library Firebase langsung lewat tautan CDN resmi Google
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        // 2. Menggunakan Kunci Akses API Asli Anda
+        const firebaseConfig = {
+            apiKey: "AIzaSyC6MwXI4wtfyiAAHn2KJxG2UAFNacRa51U",
+            authDomain: "web-industri-b2b.firebaseapp.com",
+            projectId: "web-industri-b2b",
+            storageBucket: "web-industri-b2b.firebasestorage.app",
+            messagingSenderId: "682973880679",
+            appId: "1:682973880679:web:ccfc7f412a61eb8869cfc2"
+        };
+
+        // Inisialisasi Aplikasi Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Menjadikan fungsi switchForm global agar bisa dipanggil oleh atribut onclick pada HTML
+        window.switchForm = function(type) {
             const loginBox = document.getElementById('login-box');
             const registerBox = document.getElementById('register-box');
             
@@ -69,6 +88,43 @@
                 registerBox.style.display = 'none';
             }
         }
+
+        // ==========================================
+        // EVENT: REGISTRASI (CREATE USER)
+        // ==========================================
+        document.getElementById('form-register').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+            const namaPerusahaan = document.getElementById('reg-perusahaan').value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert(`Registrasi Berhasil!\nSelamat bergabung, ${namaPerusahaan}. Silakan masuk menggunakan akun bisnis Anda.`);
+                    window.switchForm('login');
+                })
+                .catch((error) => {
+                    alert("Registrasi Gagal: " + error.message);
+                });
+        });
+
+        // ==========================================
+        // EVENT: MASUK (SIGN IN USER)
+        // ==========================================
+        document.getElementById('form-login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert("Akses Diterima! Selamat datang di Portal Utama Procurement.");
+                    window.location.href = "index.html"; 
+                })
+                .catch((error) => {
+                    alert("Akses Ditolak: Periksa kembali email dan kata sandi Anda!");
+                });
+        });
     </script>
 </body>
 </html>
